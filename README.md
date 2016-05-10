@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # angular-js-blueprints-app
 
 Este es un proyecto base para utilizar en la creación de los prototipos finales del curso de Arquitectura de Software ARSW de la Escuela Colombiana de Ingenieria.
@@ -34,3 +35,6 @@ Para el prototipo se espera usar el framework AngularJS 1.x de una forma bastant
 Para ese proposito se coloca de manera de ejemplo en la base del webapp un [index.html](https://github.com/DanielDiazRobles/angular-js-blueprints-app/blob/master/src/main/webapp/index.html) y [app.js](https://github.com/DanielDiazRobles/angular-js-blueprints-app/blob/master/src/main/webapp/app.js) sencillos que permiten crear aplicaciones angular asociadas a un solo controlador y con vistas que se presentan o no bajo un conjunto de banderas (variables boolean).
 
 Es importante notar que esta aproximación permite satisfacer los requerimientos de los prototipos finales del curso de ARSW pero tiene fuerte limitaciones al momento de ser usado en aplicaciones de mayor complejidad en las que se recomienda como buena practica la modularización de la aplicacion y el uso de frameworks que permitan tener una mejor gobernabilidad sobre el codigo de la capa cliente.
+=======
+# ShareParknkhkkh
+>>>>>>> 989c36ca688d1bec7d0b6946d915052aeb383aae
