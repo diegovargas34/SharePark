@@ -57,7 +57,7 @@ public class ParqueaderoController {
         
     }
     
-    
+    //hello
     
     @RequestMapping(value = "/{blueprintcode}",method = RequestMethod.GET)        
     @ResponseBody
