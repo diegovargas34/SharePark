@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    
+    <head >
+        <script src="js/libs/angular.min.js"></script>
+        <script src="js/libs/angular-route.js"></script>
+        <script src="app.js"></script>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <title>SHAREPARK</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div ng-controller="AppController as control">
+            <!-- Pagina Login -->
+            <div ng-show="mostrarLogin">
+                <div id="content">
+                    {{ greeting }}
+                </div>
+                  <form>
+                    Nombres: <input type="text" ng-model="firstname"><br>
+                    Apellidos: <input type="text" ng-model="lastname"><br>
+                    Cedula: <input type="int" ng-model="cedula"><br>
+                    Mensualidad:<input type="radio" ng-model="myVar" value="false">False
+                                <input type="radio" ng-model="myVar" value="true">True<br>
+                    Calificacion: <input type="int" ng-model="calificacion"><br>
+                    Codigo de parqueadero: <input type="int" ng-model="codigop"><br>
+                    Telefono: <input type="int" ng-model="telefono"><br>
+                   </form>
+                <div id="navigation">
+                    <button ng-click="irAPagina1()">
+                        Ingresar
+                    </button>
+                    <button ng-click="irAPagina2()">
+                        Cancelar
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Pagina 1 -->
+            <div ng-show="mostrarPagina1">
+                <div id="content">
+                    Pagina 1
+                    <button ng-click="control.consultar()">Ver Parqueaderos</button>
+                    
+                    <select ng-model="control.codigopark">
+                        <option ng-repeat="o in lista" value="{{o}}"  >{{o}}</option>
+                    </select>
+                    
+                    
+                </div>
+                <div id="navigation">
+                    <button ng-click="irALogin()">
+                        Volver
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Pagina 2 -->
+            <div ng-show="mostrarPagina2">
+                <div id="content">
+                    Pagina 2
+                </div>
+                <div id="navigation">
+                    <button ng-click="irALogin()">
+                        Volver
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+    </body>
+</html>
