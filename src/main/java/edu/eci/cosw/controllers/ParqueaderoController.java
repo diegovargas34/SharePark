@@ -54,7 +54,6 @@ public class ParqueaderoController {
     @RequestMapping(method = RequestMethod.GET)
     public Map<Integer,Parqueadero> allBlueprints() {       
         return services.getBlueprints();
-        
     }
     
     //hello
