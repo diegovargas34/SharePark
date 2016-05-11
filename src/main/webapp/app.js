@@ -40,7 +40,6 @@ app.controller('AppController', ['$scope','$http', function($scope,$http) {
         $scope.mostrarPagina2 = false;
     }
     this.consultar=function(){
-        alert('success23!');
         $scope.code = null;
         $scope.response = null;
         //$http.get('rest/parqueaderos').success(function (data, status, headers, config) {
