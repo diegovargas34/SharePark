@@ -22,9 +22,9 @@ app.controller('AppController', ['$scope','$http', function($scope,$http) {
 
     
     
-    $scope.mostrarLogin = true;
+    $scope.mostrarLogin = false;
     $scope.mostrarPagina1 = false;
-    $scope.mostrarPagina2 = false;
+    $scope.mostrarPagina2 = true;
 
     $scope.irAPagina1 = function(){
         $scope.mostrarPagina1 = true;
