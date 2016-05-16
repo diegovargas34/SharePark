@@ -81,15 +81,19 @@ app.controller('AppController', ['$scope','$http', function($scope,$http) {
         
         this.mostrarDetallesPark=function(){
             
-            $http.get($scope.url+this.codigopark).success(function (data, status, headers, config) {
+           $http.get($scope.url+this.codigopark).success(function (data, status, headers, config) {
                
-                $scope.parqueadero=data;
+           $scope.parqueadero=data;
                 
-
+           
+           var precio=(data.precioMinuto);
+           document.getElementById('precio').innerHTML = precio;
            
            var localizacion=(data.localizacion);
-           document.getElementById('td1').innerHTML = localizacion;
+           document.getElementById('localizacion').innerHTML = localizacion;
            
+           var tipo=(data.tipo);
+           document.getElementById('tipo').innerHTML = tipo;
 
             alert('success!');    
                 
@@ -99,6 +103,15 @@ app.controller('AppController', ['$scope','$http', function($scope,$http) {
             });
             
                       
+        };
+        
+        
+        this.verCuposDisponibles=function(){
+            
+            
+            
+            
+            
             
             
         };

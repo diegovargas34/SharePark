@@ -21,7 +21,6 @@ public class Parqueadero {
 
     private Bloque bloque=new Bloque();
 
-    private ArrayList <Bloque> bloques=new ArrayList<>();
 
     
     public Parqueadero(int codigo, int codUsuario, int precioMinuto, String localizacion, String tipo) {

@@ -9,7 +9,24 @@
         <title>SHAREPARK</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style>
+         table, th , td {
+            border: 1px solid grey;
+            border-collapse: collapse;
+            padding: 5px;
+         }
+         
+         table tr:nth-child(odd) {
+            background-color: #f2f2f2;
+         }
+         
+         table tr:nth-child(even) {
+            background-color: #ffffff;
+         }
+      </style>
     </head>
+  
     <body>
         <div ng-controller="AppController as control">
             <!-- Pagina Login -->
@@ -51,27 +68,29 @@
                     
                     <h4>{{control.codigopark}}</h4>
 
-                    
-
                     <table>
                      <tr>
                         <th>Parqueadero</th>
-                        <th>Bloques Disponibles</th>
+                        <th>Precio por minuto</th>
+                        <th>Localización</th>
+                        <th>Tipo</th>
+                        <th></th>
                      </tr>
                      
                      <tr>
                         <td> {{ control.codigopark }}</td>
 
-                        <td id="td1"></td>
+                        <td id="precio"></td>
                    
+                        <td id="localizacion"></td>
+                        
+                        <td id="tipo"></td>
 
-                        <td>{{ control.parqueadero }}</td>
+                        <td> <button ng-click="control.mostrarDetallesPark()">Ver Cupos Disponibles</button> </td>
 
                      </tr>
 							
                   </table>
-                    
-                    
                     
                 </div>
                 <div id="navigation">
