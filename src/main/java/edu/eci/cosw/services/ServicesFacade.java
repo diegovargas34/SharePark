@@ -32,7 +32,7 @@ public class ServicesFacade {
     }
     //Prueba
     
-    public Set<Integer> getBlueprintNames(){
+    public Set<Integer> getBlueprintCodes(){
         return dummyBluePrints.keySet();
     }
     

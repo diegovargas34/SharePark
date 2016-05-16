@@ -1,5 +1,3 @@
-
-
 var app = angular.module('app', []);
 
 app.controller('AppController', ['$scope','$http', function($scope,$http) {
@@ -12,9 +10,10 @@ app.controller('AppController', ['$scope','$http', function($scope,$http) {
     $scope.codigop='';
     $scope.telefono='';
     $scope.lista=[];
-    $scope.codigopark=0;
+    this.codigopark='codigopark';
     $scope.method='GET';
-    $scope.url='rest/parqueaderos';
+    $scope.url='rest/parqueaderos/';
+    this.parqueadero=null;
     
     
     $scope.mostrarLogin = true;
@@ -39,7 +38,7 @@ app.controller('AppController', ['$scope','$http', function($scope,$http) {
         $scope.mostrarPagina1 = false;
         $scope.mostrarPagina2 = false;
     }
-    this.consultar=function(){
+    this.consultarParqueaderos=function(){
         $scope.code = null;
         $scope.response = null;
         //$http.get('rest/parqueaderos').success(function (data, status, headers, config) {
@@ -72,6 +71,23 @@ app.controller('AppController', ['$scope','$http', function($scope,$http) {
         $scope.updateModel = function(method, url) {
             $scope.method = method;
             $scope.url = url;
+        };
+        
+        this.mostrarDetallesPark=function(){
+            
+            $http.get($scope.url+this.codigopark).success(function (data, status, headers, config) {
+               
+                $scope.parqueadero=data;
+                
+            alert('success!');    
+                
+            }).error(function (data, status, headers, config) {
+                alert('error!');
+            });
+            
+                      
+            
+            
         };
 
 }]);

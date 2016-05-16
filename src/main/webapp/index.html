@@ -41,11 +41,29 @@
             <div ng-show="mostrarPagina1">
                 <div id="content">
                     Pagina 1
-                    <button ng-click="control.consultar()">Ver Parqueaderos</button>
+                    <button ng-click="control.consultarParqueaderos()">Ver Parqueaderos</button>
                     
                     <select ng-model="control.codigopark">
                         <option ng-repeat="o in lista" value="{{o}}"  >{{o}}</option>
                     </select>
+                    
+                    <button ng-click="control.mostrarDetallesPark()">Ver Detalle Parqueadero</button>
+                    
+                    <h4>{{control.codigopark}}</h4>
+                    
+                    <table>
+                     <tr>
+                        <th>Parqueadero</th>
+                        <th>Bloques Disponibles</th>
+                     </tr>
+                     
+                     <tr>
+                        <td> {{ control.codigopark }}</td>
+                        <td>{{ control.parqueadero }}</td>
+                     </tr>
+							
+                  </table>
+                    
                     
                     
                 </div>

@@ -5,18 +5,20 @@
  */
 package edu.eci.cosw.samples.model;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author diego
  */
 public class Parqueadero {
     
-    private String nombre;
     private int codigo;
     private int codUsuario;
     private int precioMinuto;
     private String localizacion;
     private String tipo;
+    private ArrayList <Bloque> bloques=new ArrayList<>();
     
     public Parqueadero(int codigo, int codUsuario, int precioMinuto, String localizacion, String tipo) {
         this.codigo = codigo;
@@ -27,8 +29,6 @@ public class Parqueadero {
     }    
     
     
-    
-
     public int getCodigo() {
         return codigo;
     }
@@ -69,12 +69,5 @@ public class Parqueadero {
         this.tipo = tipo;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
     
 }

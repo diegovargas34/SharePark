@@ -45,18 +45,18 @@ public class ParqueaderoController {
     }
 
     
-    /*@RequestMapping(method = RequestMethod.GET)
-    public Set<String> allBlueprintNames() {       
-        return services.getBlueprintNames();
-        
-    }*/
-    
     @RequestMapping(method = RequestMethod.GET)
-    public Map<Integer,Parqueadero> allBlueprints() {       
-        return services.getBlueprints();
+    public Set<Integer> allBlueprintCodes() {       
+        return services.getBlueprintCodes();
+        
     }
     
-    //hello
+    /*@RequestMapping(method = RequestMethod.GET)
+    public Map<Integer,Parqueadero> allBlueprints() {       
+        return services.getBlueprints();
+    }*/
+    
+   
     
     @RequestMapping(value = "/{blueprintcode}",method = RequestMethod.GET)        
     @ResponseBody
