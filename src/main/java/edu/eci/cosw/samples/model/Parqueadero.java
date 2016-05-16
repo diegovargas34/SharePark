@@ -18,11 +18,11 @@ public class Parqueadero {
     private int precioMinuto;
     private String localizacion;
     private String tipo;
-<<<<<<< HEAD
+
     private Bloque bloque=new Bloque();
-=======
+
     private ArrayList <Bloque> bloques=new ArrayList<>();
->>>>>>> 365747dd0ac3ec905bd3cafe897bacceee5b4411
+
     
     public Parqueadero(int codigo, int codUsuario, int precioMinuto, String localizacion, String tipo) {
         this.codigo = codigo;
