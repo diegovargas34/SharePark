@@ -9,12 +9,19 @@ app.controller('AppController', ['$scope','$http', function($scope,$http) {
     $scope.calificacion='';
     $scope.codigop='';
     $scope.telefono='';
+<<<<<<< HEAD
     
+=======
+>>>>>>> 365747dd0ac3ec905bd3cafe897bacceee5b4411
     $scope.lista=[];
     this.codigopark='codigopark';
     $scope.method='GET';
     $scope.url='rest/parqueaderos/';
+<<<<<<< HEAD
     this.parqueadero='';
+=======
+    this.parqueadero=null;
+>>>>>>> 365747dd0ac3ec905bd3cafe897bacceee5b4411
     
     
     $scope.mostrarLogin = true;
@@ -80,10 +87,15 @@ app.controller('AppController', ['$scope','$http', function($scope,$http) {
                
                 $scope.parqueadero=data;
                 
+<<<<<<< HEAD
            
            var localizacion=(data.localizacion);
            document.getElementById('td1').innerHTML = localizacion;
            
+=======
+            alert('success!');    
+                
+>>>>>>> 365747dd0ac3ec905bd3cafe897bacceee5b4411
             }).error(function (data, status, headers, config) {
                 alert('error!');
             });
