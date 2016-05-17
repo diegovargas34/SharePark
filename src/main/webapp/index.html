@@ -9,63 +9,40 @@
         <title>SHAREPARK</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <style>
-         table, th , td {
-            border: 1px solid grey;
-            border-collapse: collapse;
-            padding: 5px;
-         }
-         
-         table tr:nth-child(odd) {
-            background-color: #f2f2f2;
-         }
-         
-         table tr:nth-child(even) {
-            background-color: #ffffff;
-         }
-      </style>
+        <link rel="stylesheet" type="text/css" href="class.css" />
     </head>
   
     <body>
-        <style type="text/css">
-            h1{
-                text-align: center
-            }
-            .wrapper { float: left; clear: left; display: table}
-             img.img-responsive { display: table-cell; max-width: 1000%; }
-             body { background: lightseagreen !important; } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
-        </style>
+
         <div ng-controller="AppController as control">
             <!-- Pagina Login -->
-            <div ng-show="mostrarLogin">
+            <div ng-show="mostrarLogin" style="background-color:lightskyblue;" class="col-md-4 col-md-offset-4">
                 <div id="content">
-                    {{ greeting }}
+                    <h1>{{ greeting }}</h1>
                 </div>
-                  <form>
-                    Nombres: <input type="text" ng-model="firstname"><br>
-                    Apellidos: <input type="text" ng-model="lastname"><br>
-                    Cedula: <input type="int" ng-model="cedula"><br>
-                    Mensualidad:<input type="radio" ng-model="myVar" value="false">False
-                                <input type="radio" ng-model="myVar" value="true">True<br>
-                    Calificacion: <input type="int" ng-model="calificacion"><br>
-                    Codigo de parqueadero: <input type="int" ng-model="codigop"><br>
-                    Telefono: <input type="int" ng-model="telefono"><br>
+                  <form style="background-color:lightskyblue;" class="col-md-6 col-md-offset-3">
+                      <label>Nombres:</label> <input type="text" ng-model="firstname"><br>
+                      <label>Apellidos:</label> <input type="text" ng-model="lastname"><br>
+                      <Label>Cedula:</label> <input type="int" ng-model="cedula"><br>
+                      <label>Mensualidad:</label><input type="radio" ng-model="myVar" value="false">False <input type="radio" ng-model="myVar" value="true">True<br>
+                      <label>Calificacion:</label> <input type="int" ng-model="calificacion"><br>
+                      <label>Codigo de parqueadero:</label> <input type="int" ng-model="codigop"><br>
+                      <label>Telefono:</label> <input type="int" ng-model="telefono"><br>
                    </form>
-                <div id="navigation">
-                    <button ng-click="irAPagina1()">
+                <div>
+                    <button id=btningresar ng-click="irAPagina1()">
                         Ingresar
                     </button>
-                    <button ng-click="irAPagina2()">
+                    <button id=btncancelar ng-click="irAPagina2()" >
                         Cancelar
                     </button>
                 </div>
             </div>
             
             <!-- Pagina 1 -->
-            <div ng-show="mostrarPagina1">
+            <div ng-show="mostrarPagina1" style="background-color:lightskyblue;" class="col-md-4 col-md-offset-4">
                 <div id="content">
-                    Pagina 1
+                    <h3>Lista de Parqueaderos</h3>
                     <button ng-click="control.consultarParqueaderos()">Ver Parqueaderos</button>
                     
                     <select ng-model="control.codigopark">
@@ -76,7 +53,7 @@
                     
                     <h4>{{control.codigopark}}</h4>
 
-                    <table>
+                    <table class="center">
                      <tr>
                         <th>Parqueadero</th>
                         <th>Precio por minuto</th>
@@ -113,9 +90,9 @@
                     <h1 >Sharepark</h1>
                     
           
-               
+               <img src="http://www.usaquen.gov.co/images/stories/Noticias_2015/parquea.jpg" alt="Smiley face" class="img-thumbnail">
                 <div id="navigation" class="col-md-2 col-md-offset-4">
-                    <button ng-click="irALogin()" >
+                    <button id=btnhome ng-click="irALogin()" >
                         Registrarse
                     </button>
                 </div>

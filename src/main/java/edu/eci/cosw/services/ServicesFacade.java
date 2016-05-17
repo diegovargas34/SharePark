@@ -24,7 +24,7 @@ public class ServicesFacade {
     
     static{
         dummyBluePrints.put(123, new Parqueadero(123,321,30,"Bogota","Cubierto"));
-        dummyBluePrints.put(124, new Parqueadero(124,322,40,"Bogota","ABierto"));
+        dummyBluePrints.put(124, new Parqueadero(124,322,40,"Bogota","Abierto"));
     }
     
     public void addNewBlueprint(int codigo,Parqueadero p){
