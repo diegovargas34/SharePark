@@ -18,17 +18,19 @@ public class Parqueadero {
     private int precioMinuto;
     private String localizacion;
     private String tipo;
-
+    private String barrio;
+    
     private Bloque bloque=new Bloque();
 
 
     
-    public Parqueadero(int codigo, int codUsuario, int precioMinuto, String localizacion, String tipo) {
+    public Parqueadero(int codigo, int codUsuario, int precioMinuto, String localizacion, String tipo, String barrio) {
         this.codigo = codigo;
         this.codUsuario = codUsuario;
         this.precioMinuto = precioMinuto;
         this.localizacion = localizacion;
         this.tipo = tipo;
+        this.barrio=barrio;
     }    
     
     
@@ -72,5 +74,12 @@ public class Parqueadero {
         this.tipo = tipo;
     }
 
+    public String getBarrio() {
+        return barrio;
+    }
+
+    public void setBarrio(String barrio) {
+        this.barrio = barrio;
+    }
     
 }

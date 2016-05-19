@@ -8,6 +8,7 @@ package edu.eci.cosw.controllers;
 import edu.eci.cosw.samples.model.Blueprint;
 import edu.eci.cosw.samples.model.Parqueadero;
 import edu.eci.cosw.services.ServicesFacade;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -56,12 +57,18 @@ public class ParqueaderoController {
         return services.getBlueprints();
     }*/
     
-   
+    
     
     @RequestMapping(value = "/{blueprintcode}",method = RequestMethod.GET)        
     @ResponseBody
     public Parqueadero getABlueprint(@PathVariable("blueprintcode") int blueprintcode) {       
-        return services.getBlueprintByName(blueprintcode);
+        return services.getBlueprintByCode(blueprintcode);
+    }
+    
+    @RequestMapping(value = "/proof/{blueprintneighbor}",method = RequestMethod.GET)        
+    @ResponseBody
+    public ArrayList <Integer> getTheBlueprintsByNeighborhood(@PathVariable("blueprintneighbor") String blueprintneighbor) {
+        return services.getBlueprintsByNeighborhood(blueprintneighbor);
     }
 
         
