@@ -5,6 +5,7 @@
  */
 package edu.eci.cosw.controllers;
 
+import edu.eci.cosw.samples.model.Bloque;
 import edu.eci.cosw.samples.model.Blueprint;
 import edu.eci.cosw.samples.model.Parqueadero;
 import edu.eci.cosw.services.ServicesFacade;
@@ -45,17 +46,15 @@ public class ParqueaderoController {
         return new ResponseEntity<>(HttpStatus.ACCEPTED);
     }
 
-    
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping(value = "/allcodes",method = RequestMethod.GET)        
     public Set<Integer> allBlueprintCodes() {       
-        return services.getBlueprintCodes();
-        
+        return services.getBlueprintCodes();        
     }
     
-    /*@RequestMapping(method = RequestMethod.GET)
+    @RequestMapping(method = RequestMethod.GET)
     public Map<Integer,Parqueadero> allBlueprints() {       
         return services.getBlueprints();
-    }*/
+    }
     
     
     
@@ -65,7 +64,14 @@ public class ParqueaderoController {
         return services.getBlueprintByCode(blueprintcode);
     }
     
-    @RequestMapping(value = "/proof/{blueprintneighbor}",method = RequestMethod.GET)        
+    @RequestMapping(value = "/{blueprintcode}/bloque",method = RequestMethod.GET)        
+    @ResponseBody
+    public Bloque getBlueprintsBlock(@PathVariable("blueprintcode") int blueprintcode) {       
+        return services.getBlueprintsBlock(blueprintcode);
+    }
+    
+    
+    @RequestMapping(value = "/{blueprintneighbor}/proof",method = RequestMethod.GET)        
     @ResponseBody
     public ArrayList <Integer> getTheBlueprintsByNeighborhood(@PathVariable("blueprintneighbor") String blueprintneighbor) {
         return services.getBlueprintsByNeighborhood(blueprintneighbor);

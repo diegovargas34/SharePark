@@ -20,7 +20,7 @@ public class Parqueadero {
     private String tipo;
     private String barrio;
     
-    private Bloque bloque=new Bloque();
+    private final Bloque bloque=new Bloque("10am","5pm","10/06/2016","10/06/2016");
 
 
     
@@ -80,6 +80,10 @@ public class Parqueadero {
 
     public void setBarrio(String barrio) {
         this.barrio = barrio;
+    }
+
+    public Bloque getBloque() {
+        return bloque;
     }
     
 }

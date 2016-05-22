@@ -12,41 +12,51 @@ import java.util.Date;
  * @author diego
  */
 public class Bloque {
-    private Date horaInicio;
-    private Date horaFin;
-    private Date fechaInicio;
-    private Date fechaFin;
+    private String horaInicio;
+    private String horaFin;
+    private String fechaInicio;
+    private String fechaFin;
 
-    public Date getHoraInicio() {
+    public Bloque(String horaInicio, String horaFin, String fechaInicio, String fechaFin) {
+        this.horaInicio = horaInicio;
+        this.horaFin = horaFin;
+        this.fechaInicio = fechaInicio;
+        this.fechaFin = fechaFin;
+    }
+    
+
+    public String getHoraInicio() {
         return horaInicio;
     }
 
-    public void setHoraInicio(Date horaInicio) {
+    public void setHoraInicio(String horaInicio) {
         this.horaInicio = horaInicio;
     }
 
-    public Date getHoraFin() {
+    public String getHoraFin() {
         return horaFin;
     }
 
-    public void setHoraFin(Date horaFin) {
+    public void setHoraFin(String horaFin) {
         this.horaFin = horaFin;
     }
 
-    public Date getFechaInicio() {
+    public String getFechaInicio() {
         return fechaInicio;
     }
 
-    public void setFechaInicio(Date fechaInicio) {
+    public void setFechaInicio(String fechaInicio) {
         this.fechaInicio = fechaInicio;
     }
 
-    public Date getFechaFin() {
+    public String getFechaFin() {
         return fechaFin;
     }
 
-    public void setFechaFin(Date fechaFin) {
+    public void setFechaFin(String fechaFin) {
         this.fechaFin = fechaFin;
     }
+
+    
     
 }

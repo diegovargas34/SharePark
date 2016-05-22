@@ -13,22 +13,30 @@ import java.util.Date;
  */
 public class Cupo {
     
-    private Date fechaInicio; 
-    private Date fechaFin ;
+    private String fechaInicio; 
+    private String fechaFin ;
 
-    public Date getFechaInicio() {
+    public Cupo(String fechaInicio, String fechaFin) {
+        this.fechaInicio = fechaInicio;
+        this.fechaFin = fechaFin;
+    }
+    
+
+    public String getFechaInicio() {
         return fechaInicio;
     }
 
-    public void setFechaInicio(Date fechaInicio) {
+    public void setFechaInicio(String fechaInicio) {
         this.fechaInicio = fechaInicio;
     }
 
-    public Date getFechaFin() {
+    public String getFechaFin() {
         return fechaFin;
     }
 
-    public void setFechaFin(Date fechaFin) {
+    public void setFechaFin(String fechaFin) {
         this.fechaFin = fechaFin;
     }
+
+    
 }

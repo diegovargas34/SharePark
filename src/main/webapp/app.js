@@ -48,7 +48,7 @@ app.controller('AppController', ['$scope','$http', function($scope,$http) {
         $scope.code = null;
         $scope.response = null;
         //$http.get('rest/parqueaderos').success(function (data, status, headers, config) {
-        $http({method: $scope.method, url: $scope.url}).then(function (response) {
+        $http({method: $scope.method, url: $scope.url+"/allcodes"}).then(function (response) {
             
             $scope.status = response.status;
             $scope.data = response.data;
@@ -94,6 +94,9 @@ app.controller('AppController', ['$scope','$http', function($scope,$http) {
            
            var tipo=(data.tipo);
            document.getElementById('tipo').innerHTML = tipo;
+           
+           var barrio=(data.barrio);
+           document.getElementById('barrio').innerHTML = barrio;
 
             alert('success!');    
                 
@@ -108,10 +111,21 @@ app.controller('AppController', ['$scope','$http', function($scope,$http) {
         
         this.verCuposDisponibles=function(){
             
-            
-            
-            
-            
+           $http.get($scope.url+this.codigopark+"/bloque").success(function (data, status, headers, config) {
+              
+           $scope.parqueadero=data;
+                
+           
+           var bloque=(data.bloque);
+           document.getElementById('bloque').innerHTML = bloque;
+           
+
+            alert('success!');    
+                
+
+            }).error(function (data, status, headers, config) {
+                alert('error!');
+            });
             
             
         };
