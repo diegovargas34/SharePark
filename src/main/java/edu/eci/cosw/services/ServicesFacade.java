@@ -26,9 +26,9 @@ public class ServicesFacade {
     private static final Map<Integer,Parqueadero> dummyBluePrints=new LinkedHashMap<>();
     
     static{
-        dummyBluePrints.put(123, new Parqueadero(123,321,30,"Bogota","Cubierto","Teusaquillo"));
-        dummyBluePrints.put(124, new Parqueadero(124,322,40,"Bogota","Abierto","Teusaquillo"));
-        dummyBluePrints.put(125, new Parqueadero(125,323,50,"Bogota","Cubierto","Candelaria"));
+        dummyBluePrints.put(123, new Parqueadero(123,321,30,"Bogota","Cubierto","Teusaquillo",new Bloque("10am","5pm","10/06/2016","10/06/2016")));
+        dummyBluePrints.put(124, new Parqueadero(124,322,40,"Bogota","Abierto","Teusaquillo",new Bloque("7am","6pm","20/06/2016","20/06/2016")));
+        dummyBluePrints.put(125, new Parqueadero(125,323,50,"Bogota","Cubierto","Candelaria",new Bloque("8am","4pm","30/06/2016","30/06/2016")));
     }
     
     public void addNewBlueprint(int codigo,Parqueadero p){

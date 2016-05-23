@@ -16,11 +16,7 @@ app.controller('AppController', ['$scope','$http', function($scope,$http) {
     $scope.method='GET';
     $scope.url='rest/parqueaderos/';
 
-    this.parqueadero='';
-
-    this.parqueadero=null;
-
-    
+    $scope.parqueadero='';    
     
     $scope.mostrarLogin = false;
     $scope.mostrarPagina1 = false;
@@ -97,6 +93,13 @@ app.controller('AppController', ['$scope','$http', function($scope,$http) {
            
            var barrio=(data.barrio);
            document.getElementById('barrio').innerHTML = barrio;
+           
+           var horaInicio=(data.bloque.horaInicio);
+           document.getElementById('horaInicio').innerHTML = horaInicio;
+           
+           
+           
+           
 
             alert('success!');    
                 
@@ -111,21 +114,15 @@ app.controller('AppController', ['$scope','$http', function($scope,$http) {
         
         this.verCuposDisponibles=function(){
             
-           $http.get($scope.url+this.codigopark+"/bloque").success(function (data, status, headers, config) {
-              
-           $scope.parqueadero=data;
-                
-           
-           var bloque=(data.bloque);
-           document.getElementById('bloque').innerHTML = bloque;
+           $http.get($scope.url+this.codigopark).success(function (data, status, headers, config) {
            
 
-            alert('success!');    
+           alert('success!');    
                 
 
-            }).error(function (data, status, headers, config) {
+           }).error(function (data, status, headers, config) {
                 alert('error!');
-            });
+           });
             
             
         };

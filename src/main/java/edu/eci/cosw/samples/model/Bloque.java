@@ -23,6 +23,10 @@ public class Bloque {
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
     }
+
+    Bloque() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 
     public String getHoraInicio() {

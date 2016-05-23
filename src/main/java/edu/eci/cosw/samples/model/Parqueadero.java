@@ -20,17 +20,18 @@ public class Parqueadero {
     private String tipo;
     private String barrio;
     
-    private final Bloque bloque=new Bloque("10am","5pm","10/06/2016","10/06/2016");
+    private final Bloque bloque;
 
 
     
-    public Parqueadero(int codigo, int codUsuario, int precioMinuto, String localizacion, String tipo, String barrio) {
+    public Parqueadero(int codigo, int codUsuario, int precioMinuto, String localizacion, String tipo, String barrio,Bloque b) {
         this.codigo = codigo;
         this.codUsuario = codUsuario;
         this.precioMinuto = precioMinuto;
         this.localizacion = localizacion;
         this.tipo = tipo;
         this.barrio=barrio;
+        this.bloque=b;
     }    
     
     

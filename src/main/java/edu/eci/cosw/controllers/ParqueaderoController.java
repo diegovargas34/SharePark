@@ -66,7 +66,7 @@ public class ParqueaderoController {
     
     @RequestMapping(value = "/{blueprintcode}/bloque",method = RequestMethod.GET)        
     @ResponseBody
-    public Bloque getBlueprintsBlock(@PathVariable("blueprintcode") int blueprintcode) {       
+    public Bloque getBlueprintBlock(@PathVariable("blueprintcode") int blueprintcode) {       
         return services.getBlueprintsBlock(blueprintcode);
     }
     
