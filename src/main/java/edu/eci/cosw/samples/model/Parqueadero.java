@@ -20,7 +20,7 @@ public class Parqueadero {
     private String tipo;
     private String barrio;
     
-    private final Bloque bloque;
+    private Bloque bloque;
 
 
     
@@ -33,6 +33,15 @@ public class Parqueadero {
         this.barrio=barrio;
         this.bloque=b;
     }    
+    
+    public Parqueadero(int codigo, int precioMinuto, String localizacion, String tipo, String barrio){
+        this.codigo = codigo;
+        this.precioMinuto = precioMinuto;
+        this.localizacion = localizacion;
+        this.tipo = tipo;
+        this.barrio=barrio;
+   
+    }
     
     
     public int getCodigo() {

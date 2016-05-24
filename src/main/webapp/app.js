@@ -128,7 +128,16 @@ app.controller('AppController', ['$scope','$http', function($scope,$http) {
                       
         };
         
-        
+        $scope.enviar = function () {
+                   
+                    $http.post($scope.url+this.codigopark,{"codigo":$scope.codigop,"precioMinuto":$scope.precio,"localizacion":$scope.localizacion,"tipo":$scope.tipo,"barrio":$scope.barrio}).
+                            success(function (data) {
+                                
+                            }).
+                            error(function (data) {
+                                alert('error');
+                            }); 
+                };  
 
 }]);
 

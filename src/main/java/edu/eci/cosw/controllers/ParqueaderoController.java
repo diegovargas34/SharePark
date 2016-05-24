@@ -40,7 +40,7 @@ public class ParqueaderoController {
         return "REST API OK";        
     }
     
-    @RequestMapping(method = RequestMethod.POST)        
+    @RequestMapping(value = "/{blueprintcode}",method = RequestMethod.POST)        
     public ResponseEntity<?> addBlueprint(@RequestBody Parqueadero p) {       
         services.addNewBlueprint(p.getCodigo(),p);
         return new ResponseEntity<>(HttpStatus.ACCEPTED);
