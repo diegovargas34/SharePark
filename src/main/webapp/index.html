@@ -54,36 +54,20 @@
                     
                     <h4>{{control.codigopark}}</h4>
 
-                    <table class="center">
-                     <tr>
-                        <th>Parqueadero</th>
-                        <th>Precio por minuto</th>
-                        <th>Localización</th>
-                        <th>Tipo</th>
-                        <th>Barrio</th>
-                        <th></th>
-                        <th>Cupos</th>
+                    <center>
+                        Precio por minuto: <textarea rows="1" cols="2" ng-model="precio" readonly></textarea><br>
+                        Localización:      <textarea rows="1" cols="30" ng-model="localizacion" readonly></textarea><br>
+                        Tipo:              <textarea rows="1" cols="10" ng-model="tipo" readonly></textarea><br>
+                        Barrio:            <textarea rows="1" cols="20" ng-model="barrio" readonly></textarea><br>   
                         
-                     </tr>
-                     
-                     <tr>
-                        <td> {{ control.codigopark }}</td>
-
-                        <td id="precio"></td>
-                   
-                        <td id="localizacion"></td>
+                        <button ng-click="control.mostrarDetallesPark()">Mostrar Disponibilidad</button>
                         
-                        <td id="tipo"></td>
+                        Hora de Inicio:     <textarea rows="1" cols="10"  ng-model="horaInicio" readonly></textarea><br>   
+                        Hora de Fin:        <textarea rows="1" cols="10" ng-model="horaFin" readonly></textarea><br>   
+                        Fecha de Inicio:    <textarea rows="1" cols="20" ng-model="fechaInicio" readonly></textarea><br>   
+                        Fecha de Fin:       <textarea rows="1" cols="20" ng-model="fechaFin" readonly></textarea><br>   
                         
-                        <td id="barrio"></td>
-
-                        <td> <button ng-click="control.mostrarDetallesPark()">Ver Cupos Disponibles</button> </td>
-                        
-                        <td id="horaInicio"></td>
-
-                     </tr>
-							
-                  </table>
+                  </center>
                     
                 </div>
                 <div id="navigation">

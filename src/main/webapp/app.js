@@ -9,10 +9,21 @@ app.controller('AppController', ['$scope','$http', function($scope,$http) {
     $scope.calificacion='';
     $scope.codigop='';
     $scope.telefono='';
+    $scope.precio='';
+    $scope.localizacion='';
+    $scope.tipo='';
+    $scope.barrio='';
+    $scope.horaInicio='';
+    $scope.horaFin='';
+    $scope.fechaInicio='';
+    $scope.fechaFin='';
+    
+    
+    
 
 
     $scope.lista=[];
-    this.codigopark='codigopark';
+    this.codigopark='';
     $scope.method='GET';
     $scope.url='rest/parqueaderos/';
 
@@ -80,24 +91,30 @@ app.controller('AppController', ['$scope','$http', function($scope,$http) {
            $http.get($scope.url+this.codigopark).success(function (data, status, headers, config) {
                
            $scope.parqueadero=data;
-                
            
-           var precio=(data.precioMinuto);
-           document.getElementById('precio').innerHTML = precio;
+           $scope.precio=data.precioMinuto;
+           //document.getElementById('precio').innerHTML = precio;
            
-           var localizacion=(data.localizacion);
-           document.getElementById('localizacion').innerHTML = localizacion;
+           $scope.localizacion=data.localizacion;
+           //document.getElementById('localizacion').innerHTML = localizacion;
            
-           var tipo=(data.tipo);
-           document.getElementById('tipo').innerHTML = tipo;
+           $scope.tipo=data.tipo;
+           //document.getElementById('tipo').innerHTML = tipo;
            
-           var barrio=(data.barrio);
-           document.getElementById('barrio').innerHTML = barrio;
+           $scope.barrio=data.barrio;
+           //document.getElementById('barrio').innerHTML = barrio;
            
-           var horaInicio=(data.bloque.horaInicio);
-           document.getElementById('horaInicio').innerHTML = horaInicio;
+           $scope.horaInicio=data.bloque.horaInicio;
+           //document.getElementById('horaInicio').innerHTML = horaInicio;
            
+           $scope.horaFin=data.bloque.horaFin;
+           //document.getElementById('horaFin').innerHTML = horaFin;
            
+           $scope.fechaInicio=data.bloque.fechaInicio;
+           //document.getElementById('fechaInicio').innerHTML = fechaInicio;
+           
+           $scope.fechaFin=data.bloque.fechaFin;
+           //document.getElementById('fechaFin').innerHTML = fechaFin;
            
            
 
@@ -112,20 +129,6 @@ app.controller('AppController', ['$scope','$http', function($scope,$http) {
         };
         
         
-        this.verCuposDisponibles=function(){
-            
-           $http.get($scope.url+this.codigopark).success(function (data, status, headers, config) {
-           
-
-           alert('success!');    
-                
-
-           }).error(function (data, status, headers, config) {
-                alert('error!');
-           });
-            
-            
-        };
 
 }]);
 
